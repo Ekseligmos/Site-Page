@@ -11,7 +11,7 @@ body {
 
 
 .intro {
-    background-image: url("../img/tree1920x1080.jpg");
+    background-image: url('../img/tree1920x1080.jpg');
     background-size: cover;
     height: 100vh;
     background-position: bottom;
