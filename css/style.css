@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Island Moments', cursive;
+    color: white;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+
+.intro {
+    background-image: url(/img/tree1920x1080.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+    z-index: 0;
+    background-color: #466375;
+}
+
+.intro::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .35);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1290px;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .68);
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 350px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.button {
+    position: relative;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #466375;
+    transition: color .3s;
+}
+
+.button:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 1px;
+    background-color: white;
+    left: 251px;
+    top: 10px;
+    cursor: default;
+}
+
+.title {
+    font-size: 96px;
+}
+
+@media screen and (max-width: 1325px ) {
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .button:not(:last-child)::after {
+        left: 170px;
+    }
+}
+
+@media screen and (max-width: 845px ) {
+    .container {
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .button:not(:last-child)::after {
+        left: 127px;
+    }
+}
+
+@media screen and (max-width: 558px ) {
+    .container {
+        max-width: 550px;
+        margin: auto;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .button:not(:last-child)::after {
+        display: none;
+    }
+}
+
+.modal-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.modal-content {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 10%;
+    left: 760px;
+    background-color: rgb(215, 229, 243);   
+    border-radius: 15px; 
+    color: black;
+    padding: 20px 20px 40px 20px;
+}
+
+.modal-content-title {
+    font-size: 56px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.str {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+
+.name-str {
+    display: inline-block;
+    width: 200px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.close::after, .close::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    left: 10px;
+    background-color: black;
+    opacity: .4;
+}
+
+.close::after {
+    transform: rotate(45deg);
+}
+
+.close::before {
+    transform: rotate(-45deg);
+}
+
+.close:hover {
+    opacity: .3;
+    transition: opacity .2s;
+}
